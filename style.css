@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    box-sizing: border-box; /* Border ve padding'in kutu boyutlarına dahil olmasını sağlar */
 }
 
 header {
@@ -13,12 +14,14 @@ header {
     padding: 15px 20px;
     background-color: #333;
     color: white;
+    flex-wrap: wrap; /* Header elemanlarını sarmalı hale getiriyoruz */
 }
 
 nav .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: auto; /* Logo sola yaslanır */
 }
 
 nav .logo img {
@@ -37,6 +40,8 @@ ul {
     list-style-type: none;
     display: flex;
     gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
@@ -59,7 +64,8 @@ input[type="text"] {
     font-size: 14px;
     border-radius: 5px;
     border: none;
-    max-width: 200px; /* Mobilde daha az yer kaplaması için */
+    max-width: 200px;
+    flex-grow: 1; /* Arama kutusunun genişlemesini sağlıyoruz */
 }
 
 /* Film kutuları */
@@ -79,6 +85,7 @@ input[type="text"] {
 
 .film img {
     width: 100%;
+    height: auto; /* Resmin oranını koruyarak boyutlandırır */
     border-radius: 8px;
 }
 
@@ -94,7 +101,7 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
-    font-size: 12px; /* Footer metnini küçülttük */
+    font-size: 12px;
 }
 
 /* Responsive Tasarım (Mobil uyumlu) */
@@ -108,45 +115,51 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        width: 100%;
+        text-align: center;
     }
 
     .film-container {
-        gap: 10px;
+        gap: 15px;
+        justify-content: space-around; /* Mobilde de düzgün yerleşim */
     }
 
     .film {
-        width: 150px;
+        width: 45%; /* Filmlerin mobilde biraz daha geniş olmasını sağlıyoruz */
+        max-width: 200px; /* Maximum genişlik sınırlandırıyoruz */
     }
 
     input[type="text"] {
-        width: 100%; /* Mobilde arama kutusunu tam genişlik yapalım */
+        width: 100%; /* Arama kutusunu tam genişlik yapıyoruz */
+        margin-top: 10px;
     }
 }
 
-    /* Çok küçük ekranlar (telefonlar için) */
-    nav input[type="text"] {
-        width: 100%;
-        margin-left: 0;
-    }
-
+/* Çok küçük ekranlar (telefonlar için) */
+@media (max-width: 480px) {
     .film-container {
+        gap: 10px;
         grid-template-columns: 1fr;  /* Tek sütun düzeni */
     }
 
+    .film {
+        width: 90%;  /* Mobilde filmleri daha geniş yapıyoruz */
+    }
+
     .film img {
-        height: 150px;  /* Çok küçük ekranlarda daha da küçük */
+        height: 200px; /* Resim boyutunu mobilde optimize ediyoruz */
     }
 }
 
 /* Footer Düzenlemeleri (Her iki sayfada da aynı boyutta olacak) */
 footer p {
-    font-size: 12px; /* Footer yazısını daha küçük yapıyoruz */
+    font-size: 10px; /* Footer yazısını daha küçük yapıyoruz */
     margin: 0;
 }
 
 /* Ana menüdeki resimler için stil */
 .film img {
-    width: 200px;  /* Resmin genişliğini sabitliyoruz */
-    height: 300px; /* Resmin yüksekliğini sabitliyoruz */
+    width: 100%;  /* Resmin genişliğini sabitliyoruz */
+    height: auto; /* Resmin yüksekliğini oranına göre ayarlıyoruz */
     object-fit: cover; /* Resmin boyutları sabitlenirken orantılı şekilde kesilmesini sağlar */
 }
