@@ -1,0 +1,152 @@
+/* Genel Sayfa Ayarları */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+nav .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 60px; /* Logonun boyutunu küçülttük */
+    height: auto;
+}
+
+nav .logo p {
+    font-size: 18px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    color: #f39c12;
+}
+
+/* Arama kutusu */
+input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    max-width: 200px; /* Mobilde daha az yer kaplaması için */
+}
+
+/* Film kutuları */
+.film-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.film {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.film img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.film p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 12px; /* Footer metnini küçülttük */
+}
+
+/* Responsive Tasarım (Mobil uyumlu) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .film-container {
+        gap: 10px;
+    }
+
+    .film {
+        width: 150px;
+    }
+
+    input[type="text"] {
+        width: 100%; /* Mobilde arama kutusunu tam genişlik yapalım */
+    }
+}
+
+    /* Çok küçük ekranlar (telefonlar için) */
+    nav input[type="text"] {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .film-container {
+        grid-template-columns: 1fr;  /* Tek sütun düzeni */
+    }
+
+    .film img {
+        height: 150px;  /* Çok küçük ekranlarda daha da küçük */
+    }
+}
+
+/* Footer Düzenlemeleri (Her iki sayfada da aynı boyutta olacak) */
+footer p {
+    font-size: 12px; /* Footer yazısını daha küçük yapıyoruz */
+    margin: 0;
+}
+
+/* Ana menüdeki resimler için stil */
+.film img {
+    width: 200px;  /* Resmin genişliğini sabitliyoruz */
+    height: 300px; /* Resmin yüksekliğini sabitliyoruz */
+    object-fit: cover; /* Resmin boyutları sabitlenirken orantılı şekilde kesilmesini sağlar */
+}

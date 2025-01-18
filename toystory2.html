@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Story 2 - Animaz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Video container'ı daha büyük yapmak için */
+        .video-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        iframe {
+            width: 80%; /* Videoyu genişletiyoruz */
+            height: 500px; /* Videonun yüksekliği */
+        }
+
+        /* "Dublajlı mı?" yazısını yerleştirmek için */
+        .video-info {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 18px;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Menü</a></li>
+                <li><a href="hakkimizda.html">Haqqımızda</a></li>
+                <li><a href="iletisim.html">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Toy Story 2</h1>
+        <div class="video-container">
+            <!-- Video üzerine bilgi veren yazı -->
+            <div class="video-info">Türkcə Dublajlı</div>
+            <!-- Embed video player -->
+            <iframe src="https://oynat.bayfilmizle4.com/url/b5e2cbde919747030eea9e4fcf8f36b8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Animaz. Bütün hüquqlar qorunur.</p>
+    </footer>
+</body>
+</html>
