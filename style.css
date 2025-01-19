@@ -44,6 +44,14 @@ ul {
     padding: 0;
 }
 
+/* Ana menüdeki resimler için stil */
+.film img {
+    width: 200px;  /* Resmin genişliğini sabitliyoruz */
+    height: 300px; /* Resmin yüksekliğini sabitliyoruz */
+    object-fit: cover; /* Resmin boyutları sabitlenirken orantılı şekilde kesilmesini sağlar */
+}
+
+
 ul li {
     display: inline-block;
 }
@@ -105,7 +113,8 @@ footer {
 }
 
 /* Responsive Tasarım (Mobil uyumlu) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    /* Tablet ve küçük ekranlar için */
     header {
         flex-direction: column;
         align-items: center;
@@ -121,16 +130,48 @@ footer {
 
     .film-container {
         gap: 15px;
-        justify-content: space-around; /* Mobilde de düzgün yerleşim */
+        justify-content: space-between; /* Sırasıyla düzgün yerleşim */
     }
 
     .film {
-        width: 45%; /* Filmlerin mobilde biraz daha geniş olmasını sağlıyoruz */
+        width: 45%; /* Filmler tabletlerde biraz daha geniş olmalı */
         max-width: 200px; /* Maximum genişlik sınırlandırıyoruz */
     }
 
     input[type="text"] {
         width: 100%; /* Arama kutusunu tam genişlik yapıyoruz */
+        margin-top: 10px;
+    }
+}
+
+/* Mobil uyumlu düzenleme */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .film-container {
+        gap: 10px;
+        justify-content: space-around; /* Mobilde düzgün yerleşim */
+    }
+
+    .film {
+        width: 48%; /* Film kutuları biraz daha geniş olacak */
+        max-width: 180px; /* Maksimum genişlik sınırı */
+    }
+
+    input[type="text"] {
+        width: 100%;
         margin-top: 10px;
     }
 }
@@ -147,11 +188,11 @@ footer {
     }
 
     .film img {
-        height: 200px; /* Resim boyutunu mobilde optimize ediyoruz */
+        height: 180px; /* Resim boyutunu mobilde optimize ediyoruz */
     }
 }
 
-/* Footer Düzenlemeleri (Her iki sayfada da aynı boyutta olacak) */
+/* Footer Düzenlemeleri */
 footer p {
     font-size: 10px; /* Footer yazısını daha küçük yapıyoruz */
     margin: 0;
@@ -159,7 +200,9 @@ footer p {
 
 /* Ana menüdeki resimler için stil */
 .film img {
-    width: 100%;  /* Resmin genişliğini sabitliyoruz */
-    height: auto; /* Resmin yüksekliğini oranına göre ayarlıyoruz */
-    object-fit: cover; /* Resmin boyutları sabitlenirken orantılı şekilde kesilmesini sağlar */
+    width: 200px; /* Sabit genişlik */
+    height: 300px; /* Sabit yükseklik */
+    object-fit: cover; /* Resmin orantılı şekilde kesilmesini sağlar */
+    border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
 }
+

@@ -57,5 +57,24 @@
     <footer>
         <p>&copy; 2025 Animaz. Bütün hüquqlar qorunur.</p>
     </footer>
+<script>
+    // Sağ tık engelleme
+    document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        alert("Kodlar Qorunma Altındadır!");
+    });
+
+    // Kısayol engelleme
+    document.addEventListener("keydown", function (event) {
+        if (
+            (event.ctrlKey && event.key === "u") || // Ctrl+U
+            (event.ctrlKey && event.shiftKey && event.key === "i") || // Ctrl+Shift+I
+            event.key === "F12" // F12
+        ) {
+            event.preventDefault();
+            alert("Kodlar Qorunma Altındadır!");
+        }
+    });
+</script>
 </body>
 </html>
