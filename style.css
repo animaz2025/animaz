@@ -1,10 +1,9 @@
-/* Genel Sayfa Ayarları */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    box-sizing: border-box; /* Border ve padding'in kutu boyutlarına dahil olmasını sağlar */
+    box-sizing: border-box; 
 }
 
 header {
@@ -14,18 +13,36 @@ header {
     padding: 15px 20px;
     background-color: #333;
     color: white;
-    flex-wrap: wrap; /* Header elemanlarını sarmalı hale getiriyoruz */
+    flex-wrap: wrap;
 }
+
+nav ul li select {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.kategori-info {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 
 nav .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: auto; /* Logo sola yaslanır */
+    margin-right: auto;
 }
 
 nav .logo img {
-    width: 60px; /* Logonun boyutunu küçülttük */
+    width: 60px; 
     height: auto;
 }
 
@@ -44,11 +61,10 @@ ul {
     padding: 0;
 }
 
-/* Ana menüdeki resimler için stil */
 .film img {
-    width: 200px;  /* Resmin genişliğini sabitliyoruz */
-    height: 300px; /* Resmin yüksekliğini sabitliyoruz */
-    object-fit: cover; /* Resmin boyutları sabitlenirken orantılı şekilde kesilmesini sağlar */
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover;
 }
 
 
@@ -66,17 +82,15 @@ ul li a:hover {
     color: #f39c12;
 }
 
-/* Arama kutusu */
 input[type="text"] {
     padding: 8px;
     font-size: 14px;
     border-radius: 5px;
     border: none;
     max-width: 200px;
-    flex-grow: 1; /* Arama kutusunun genişlemesini sağlıyoruz */
+    flex-grow: 1;
 }
 
-/* Film kutuları */
 .film-container {
     display: flex;
     gap: 20px;
@@ -93,7 +107,7 @@ input[type="text"] {
 
 .film img {
     width: 100%;
-    height: auto; /* Resmin oranını koruyarak boyutlandırır */
+    height: auto;
     border-radius: 8px;
 }
 
@@ -103,7 +117,6 @@ input[type="text"] {
     font-weight: bold;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 10px;
@@ -112,9 +125,7 @@ footer {
     font-size: 12px;
 }
 
-/* Responsive Tasarım (Mobil uyumlu) */
 @media (max-width: 1024px) {
-    /* Tablet ve küçük ekranlar için */
     header {
         flex-direction: column;
         align-items: center;
@@ -130,21 +141,20 @@ footer {
 
     .film-container {
         gap: 15px;
-        justify-content: space-between; /* Sırasıyla düzgün yerleşim */
+        justify-content: space-between; 
     }
 
     .film {
-        width: 45%; /* Filmler tabletlerde biraz daha geniş olmalı */
-        max-width: 200px; /* Maximum genişlik sınırlandırıyoruz */
+        width: 45%; 
+        max-width: 200px; 
     }
 
     input[type="text"] {
-        width: 100%; /* Arama kutusunu tam genişlik yapıyoruz */
+        width: 100%; 
         margin-top: 10px;
     }
 }
 
-/* Mobil uyumlu düzenleme */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -162,12 +172,12 @@ footer {
 
     .film-container {
         gap: 10px;
-        justify-content: space-around; /* Mobilde düzgün yerleşim */
+        justify-content: space-around; 
     }
 
     .film {
-        width: 48%; /* Film kutuları biraz daha geniş olacak */
-        max-width: 180px; /* Maksimum genişlik sınırı */
+        width: 48%; 
+        max-width: 180px;
     }
 
     input[type="text"] {
@@ -176,33 +186,30 @@ footer {
     }
 }
 
-/* Çok küçük ekranlar (telefonlar için) */
 @media (max-width: 480px) {
     .film-container {
         gap: 10px;
-        grid-template-columns: 1fr;  /* Tek sütun düzeni */
+        grid-template-columns: 1fr;  
     }
 
     .film {
-        width: 90%;  /* Mobilde filmleri daha geniş yapıyoruz */
+        width: 90%;  
     }
 
     .film img {
-        height: 180px; /* Resim boyutunu mobilde optimize ediyoruz */
+        height: 180px; 
     }
 }
 
-/* Footer Düzenlemeleri */
 footer p {
-    font-size: 10px; /* Footer yazısını daha küçük yapıyoruz */
+    font-size: 10px; 
     margin: 0;
 }
 
-/* Ana menüdeki resimler için stil */
 .film img {
-    width: 200px; /* Sabit genişlik */
-    height: 300px; /* Sabit yükseklik */
-    object-fit: cover; /* Resmin orantılı şekilde kesilmesini sağlar */
-    border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px;
 }
 
