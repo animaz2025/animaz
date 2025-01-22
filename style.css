@@ -14,7 +14,24 @@ header {
     background-color: #333;
     color: white;
     flex-wrap: wrap;
+    position: relative; /* Logo için referans oluşturur */
 }
+
+nav .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto; /* Logo sola yaslanır */
+}
+
+
+header .logo-container p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+}
+
 
 nav ul li select {
     padding: 5px;
@@ -212,4 +229,3 @@ footer p {
     object-fit: cover; 
     border-radius: 8px;
 }
-
