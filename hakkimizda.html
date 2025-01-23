@@ -1,38 +1,91 @@
-<!DOCTYPE html>
 <html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haqqımızda - Animaz</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpg" href="https://i.hizliresim.com/gtuw87n.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            text-align: left;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            font-size: 20px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #f39c12;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Menü</a></li>
-                <li><a href="hakkimizda.html">Haqqımızda</a></li>
-                <li><a href="iletisim.html">Əlaqə</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <div class="logo">
+            <img src="https://i.hizliresim.com/gz3sdgk.png" alt="Logo">
+        </div>
+        <h1>Hakkımızda</h1>
+        <div class="content">
+            <h2>Platformumuzun Təqdimatı</h2>
+            <p>AnimAZ platforması uşaqlar və böyüklər üçün nəzərdə tutulmuş, cizgi filmlərini pulsuz şəkildə təqdim edən bir saytdır. Filmlər ana və ya türk dilində dublyajlı, eləcə də altyazılı olaraq izlənilə bilər.</p>
 
-    <main>
-        <h1>Haqqımızda</h1>
-        <p>Saytımız AnimAZ Uşaqlar və ya Böyüklər üçün cizgi filmləri pulsuz,ana və ya türk dilində dublyajlı və ya altyazılı olaraq sizə təqdim edən platformadır.
-Saytımızın özünəməxsus video playeri olmadığına görə müxtəlif video playerlər istifadə edilir.Nəticədə hər hansı bir film sıradan çıxsa yəni saytda mövcud olub da,
-siz onu izləyə bilməsəz və yaxud istədiyiniz animasiya filmi saytda olmasa yuxarıdakı Əlaqə bölməsinə daxil olaraq müxtəlif üsullarla bizə mesaj yollaya bilərsiniz
-<br>
-animaz.netlify.app olaraq saytımızda yer alan filmlər video paylaşım saytları vasitəsiylə paylaşılır.Filmlər qəti olaraq bizim serverlerimizdə yer almadığına görə hər
-hansısa bir məsuliyyəti özümüzə götürmürük.
-Bu məzmunlar üçün heç bir müəllif hüququ təyini və ya icazəsi alınmamışdır.Platformumuzda yayımlanan hər hansı bir məzmunun müəllif hüququna zidd olduğunu düşündüyünüz təqdirdə,
-hüquq sahibləri və ya maraqlı tərəflər, lütfən bizimlə əlaqə saxlayaraq, müvafiq məzmunun dərhal silinməsi üçün bizə bildiriş göndərin.
-</p>
-    </main>
+            <h2>Texniki Məlumatlar</h2>
+            <p>Platformamızın özünəməxsus video pleyeri olmadığı üçün müxtəlif video paylaşım saytlarından istifadə edilir. Bu səbəbdən, hər hansı bir film sıradan çıxarsa və ya istədiyiniz animasiya filmi mövcud olmazsa, Ana Menyudakı Əlaqə bölməsindən bizə müraciət edə bilərsiniz.</p>
 
-    <footer>
-        <p>&copy; 2025 Animaz. Bütün hüquqlar qorunur.</p>
-    </footer>
+            <h2>Hüquqi Məsuliyyətlər</h2>
+            <p>Saytımızda yer alan bütün məzmunlar digər video paylaşım platformaları vasitəsilə təmin edilir və öz serverlərimizdə saxlanılmır. Buna görə də hər hansı müəllif hüququ məsuliyyəti qəbul edilmir. 
+            Müəllif hüququna zidd olduğunu düşündüyünüz hər hansı məzmun üçün hüquq sahibləri və maraqlı tərəflər bizimlə əlaqə saxlayaraq müvafiq məzmunun dərhal silinməsi üçün bildiriş göndərə bilərlər.</p>
+        </div>
+        <a href="https://animaz.netlify.app" class="menu-button">Ana Menyu</a>
+    </div>
 </body>
 </html>
